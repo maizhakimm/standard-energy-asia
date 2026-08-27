@@ -12750,7 +12750,7 @@ function te() {
       (0, x.jsxs)(`div`, {
         children: [
           (0, x.jsx)(`img`, {
-            src: `/media/SEA-HEADER-LOGO-H60px-W.png`,
+            src: `/media/SEA-HEADER-LOGO-H60px-.png`,
             alt: `Standard Energy Asia`,
           }),
           (0, x.jsx)(`p`, {
@@ -12761,9 +12761,7 @@ function te() {
       (0, x.jsxs)(`div`, {
         children: [
           (0, x.jsx)(`h3`, { children: `Resource` }),
-          ee
-            .slice(0, 6)
-            .map(([e, t]) => (0, x.jsx)(`a`, { href: t, children: e }, t)),
+          ee.map(([e, t]) => (0, x.jsx)(`a`, { href: t, children: e }, t)),
         ],
       }),
       (0, x.jsxs)(`div`, {
@@ -12947,11 +12945,11 @@ function re() {
         (0, x.jsxs)(`section`, {
           className: `cta`,
           children: [
-            (0, x.jsx)(`p`, {
-              children: `Ready to move from ambition to action?`,
-            }),
             (0, x.jsx)(`h2`, {
-              children: `Let’s build a more sustainable future.`,
+              children: `Get started with us today`,
+            }),
+            (0, x.jsx)(`p`, {
+              children: `The climate change consultancy you can trust to move your business from ambition to action.`,
             }),
             (0, x.jsx)(`a`, {
               className: `button light`,
