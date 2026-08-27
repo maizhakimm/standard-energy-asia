@@ -12917,26 +12917,23 @@ function re() {
         (0, x.jsxs)(`section`, {
           className: `split`,
           children: [
-            (0, x.jsx)(`video`, {
-              src: `/media/SEA-version-2.webm`,
-              muted: !0,
-              autoPlay: !0,
-              loop: !0,
-              playsInline: !0,
+            (0, x.jsxs)(`div`, {
+              className: `sustainability-visual`,
+              children: [
+                (0, x.jsx)(`img`, {
+                  src: `/media/00B.jpg`,
+                  alt: `Forest landscape representing sustainable growth`,
+                }),
+                (0, x.jsx)(`h2`, {
+                  children: `Accelerating Sustainability`,
+                }),
+              ],
             }),
             (0, x.jsxs)(`div`, {
+              className: `sustainability-copy`,
               children: [
-                (0, x.jsx)(`span`, { children: `Accelerating sustainability` }),
-                (0, x.jsx)(`h2`, {
-                  children: `From ambition to verifiable impact.`,
-                }),
                 (0, x.jsx)(`p`, {
-                  children: `Standard Energy Asia empowers businesses to achieve high-integrity climate action through clear, actionable guidance and frameworks. We minimise environmental harm while fostering growth towards global net zero and the Sustainable Development Goals.`,
-                }),
-                (0, x.jsx)(`a`, {
-                  className: `text-link`,
-                  href: `/about-us`,
-                  children: `Discover our approach →`,
+                  children: `Standard Energy Asia (SEA) empowers businesses to achieve high-integrity climate action through clear, actionable guidance and frameworks. We bridge the gap between ambition and action by creating verifiable sustainability impacts, assuring investors, companies, governments and civil society. Our focus is on minimising environmental harm while fostering growth towards global net zero and the Sustainable Development Goals.`,
                 }),
               ],
             }),

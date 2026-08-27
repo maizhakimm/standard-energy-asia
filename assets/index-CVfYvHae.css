@@ -4407,16 +4407,49 @@ a {
   line-height: 1.65;
 }
 .split {
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: center;
-  gap: 7vw;
-  padding: 10vw 7vw;
+  gap: clamp(34px, 4vw, 64px);
+  width: min(1180px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 20px 0 94px;
   display: grid;
 }
-.split video {
-  width: 100%;
+.sustainability-visual {
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
 }
-.split h2,
+.sustainability-visual:after {
+  content: "";
+  background: linear-gradient(
+    90deg,
+    rgba(1, 30, 26, 0.56),
+    rgba(1, 30, 26, 0.08)
+  );
+  position: absolute;
+  inset: 0;
+}
+.sustainability-visual img {
+  object-fit: cover;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  display: block;
+}
+.sustainability-visual h2 {
+  z-index: 1;
+  color: #fff;
+  letter-spacing: -0.035em;
+  margin: 0;
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 600;
+  line-height: 1.15;
+  position: absolute;
+  top: 50%;
+  left: clamp(24px, 4vw, 52px);
+  right: 24px;
+  transform: translateY(-50%);
+}
 .cta h2 {
   letter-spacing: -0.05em;
   font-size: clamp(34px, 4vw, 56px);
@@ -4424,8 +4457,10 @@ a {
   line-height: 1;
 }
 .split p {
-  font-size: 17px;
-  line-height: 1.75;
+  color: #263f3c;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.8;
 }
 .text-link {
   border-bottom: 1px solid;
@@ -4703,6 +4738,13 @@ footer small {
     gap: 42px;
     padding-inline: 40px;
   }
+  .split {
+    width: calc(100% - 56px);
+  }
+  .sustainability-copy p {
+    font-size: 15px;
+    line-height: 1.72;
+  }
 }
 @media (width<=900px) {
   .header {
@@ -4797,6 +4839,14 @@ footer small {
   .service-list article {
     grid-template-columns: 1fr;
     padding: 80px 24px;
+  }
+  .split {
+    gap: 34px;
+    width: calc(100% - 48px);
+    padding: 10px 0 72px;
+  }
+  .sustainability-visual h2 {
+    font-size: 34px;
   }
   .editorial img {
     height: 400px;
@@ -4907,6 +4957,21 @@ footer small {
   .split video {
     object-fit: cover;
     height: 280px;
+  }
+  .split {
+    width: calc(100% - 36px);
+    padding-bottom: 62px;
+  }
+  .sustainability-visual {
+    border-radius: 14px;
+  }
+  .sustainability-visual h2 {
+    left: 22px;
+    font-size: 28px;
+  }
+  .sustainability-copy p {
+    font-size: 15px;
+    line-height: 1.72;
   }
   .editorial h2,
   .service-list h2 {
