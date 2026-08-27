@@ -12962,59 +12962,116 @@ function re() {
 function w() {
   return (0, x.jsxs)(x.Fragment, {
     children: [
-      (0, x.jsx)(ne, {
-        eyebrow: `About Standard Energy Asia`,
-        title: `A passion for a sustainable future.`,
-        text: `We empower businesses and organisations to make a positive impact by turning climate ambition into real-world results.`,
-      }),
       (0, x.jsxs)(`section`, {
-        className: `editorial`,
+        className: `about-intro`,
         children: [
-          (0, x.jsx)(`img`, {
-            src: `/media/00B.jpg`,
-            alt: `Sustainable landscape`,
-          }),
           (0, x.jsxs)(`div`, {
+            className: `breadcrumb`,
             children: [
-              (0, x.jsx)(`span`, { children: `Our mission` }),
-              (0, x.jsx)(`h2`, {
-                children: `Collective action creates measurable change.`,
-              }),
-              (0, x.jsx)(`p`, {
-                children: `Achieving a sustainable future requires collaboration. We provide the tools, expertise and frameworks needed to help organisations transition from goals to verifiable environmental impact.`,
-              }),
+              (0, x.jsx)(`a`, { href: `/`, children: `Home` }),
+              (0, x.jsx)(`span`, { children: `/` }),
+              (0, x.jsx)(`b`, { children: `About Us` }),
             ],
+          }),
+          (0, x.jsx)(`h1`, {
+            children: `A passion for a sustainable future`,
+          }),
+          (0, x.jsx)(`p`, {
+            children: `Standard Energy Asia (SEA) was founded with a clear vision: to empower businesses and organisations to make a positive impact on the environment. We believe that achieving a sustainable future requires collective action, and we provide the tools and expertise needed to move from climate ambition to real-world results.`,
           }),
         ],
       }),
-      (0, x.jsx)(`section`, {
-        className: `values`,
+      (0, x.jsxs)(`section`, {
+        className: `mission-panel`,
         children: [
-          [
-            `Empowering Business Sustainability`,
-            `We accelerate carbon-conscious practices so businesses can reduce their footprint.`,
-          ],
-          [
-            `Goals to Impact`,
-            `We bridge the gap between climate goals and measurable environmental outcomes.`,
-          ],
-          [
-            `Collaboration for Climate Action`,
-            `We bring businesses, investors and governments together to accelerate progress.`,
-          ],
-        ].map(([e, t], n) =>
-          (0, x.jsxs)(
-            `article`,
-            {
-              children: [
-                (0, x.jsxs)(`b`, { children: [`0`, n + 1] }),
-                (0, x.jsx)(`h3`, { children: e }),
-                (0, x.jsx)(`p`, { children: t }),
+          (0, x.jsx)(`h2`, { children: `Our Mission` }),
+          (0, x.jsx)(`p`, {
+            children: `Our mission is to equip businesses with credible, practical pathways to measurable climate impact. By combining sustainability expertise, carbon-market knowledge and data-led insight, we help organisations reduce their footprint and build long-term value.`,
+          }),
+          (0, x.jsx)(`div`, {
+            className: `mission-pillars`,
+            children: [
+              [
+                `/media/005.jpg`,
+                `Empowering Business Sustainability`,
+                `We accelerate carbon-conscious practices, equipping businesses to reduce their footprint and build a sustainable future.`,
               ],
-            },
-            e,
-          ),
-        ),
+              [
+                `/media/007.jpg`,
+                `Goals to Impact`,
+                `We bridge the gap between climate goals and verifiable environmental impact, ensuring sustainability efforts deliver real results.`,
+              ],
+              [
+                `/media/006.jpg`,
+                `Collaboration for Climate Action`,
+                `We connect businesses, investors and governments to accelerate meaningful progress towards a sustainable future.`,
+              ],
+            ].map(([e, t, n], r) =>
+              (0, x.jsxs)(
+                `article`,
+                {
+                  children: [
+                    (0, x.jsx)(`img`, { src: e, alt: t }),
+                    (0, x.jsxs)(`div`, {
+                      children: [
+                        (0, x.jsx)(`b`, { children: `0${r + 1}` }),
+                        (0, x.jsx)(`h3`, { children: t }),
+                        (0, x.jsx)(`p`, { children: n }),
+                      ],
+                    }),
+                  ],
+                },
+                t,
+              ),
+            ),
+          }),
+        ],
+      }),
+      (0, x.jsxs)(`section`, {
+        className: `expertise`,
+        children: [
+          (0, x.jsxs)(`div`, {
+            className: `expertise-visual`,
+            children: [
+              (0, x.jsx)(`img`, {
+                src: `/media/00C.jpg`,
+                alt: `Business partnership and expertise`,
+              }),
+              (0, x.jsxs)(`h2`, {
+                children: [`Unparalleled`, (0, x.jsx)(`br`, {}), `Expertise`],
+              }),
+            ],
+          }),
+          (0, x.jsx)(`div`, {
+            className: `expertise-list`,
+            children: [
+              [
+                `Carbon Credit Specialists`,
+                `Experts in carbon offset project development, verification and trading.`,
+              ],
+              [
+                `Sustainability Consultants`,
+                `Equipped with the knowledge and tools to help businesses develop and implement effective sustainability strategies.`,
+              ],
+              [
+                `Data Analysts`,
+                `Using data-driven approaches to assess carbon footprints and measure the impact of sustainability initiatives.`,
+              ],
+            ].map(([e, t], n) =>
+              (0, x.jsxs)(
+                `article`,
+                {
+                  children: [
+                    (0, x.jsx)(`b`, { children: `0${n + 1}` }),
+                    (0, x.jsx)(`h3`, { children: e }),
+                    (0, x.jsx)(`p`, { children: t }),
+                  ],
+                },
+                e,
+              ),
+            ),
+          }),
+        ],
       }),
     ],
   });
