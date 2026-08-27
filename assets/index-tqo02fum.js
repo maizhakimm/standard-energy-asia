@@ -12807,9 +12807,9 @@ function re() {
   let [e, t] = (0, b.useState)(0);
   return (
     (0, b.useEffect)(() => {
-      let e = window.setInterval(() => t((e) => (e + 1) % H.length), 6500);
-      return () => window.clearInterval(e);
-    }, []),
+      let n = window.setTimeout(() => t((e + 1) % H.length), 6500);
+      return () => window.clearTimeout(n);
+    }, [e]),
     (0, x.jsxs)(x.Fragment, {
       children: [
         (0, x.jsxs)(`section`, {
