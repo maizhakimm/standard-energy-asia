@@ -4092,14 +4092,14 @@
     }
   }
 }
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 :root {
   --ink: #082d2b;
   --green: #0b725e;
   --mint: #bdecd8;
   --paper: #f4f7f0;
   --line: #d9e1d8;
-  --font-sans: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+  --font-sans: "Inter", "Avenir Next", "Segoe UI", sans-serif;
 }
 * {
   box-sizing: border-box;
@@ -4126,8 +4126,8 @@ a {
   border-bottom: 1px solid transparent;
   justify-content: space-between;
   align-items: center;
-  height: 96px;
-  padding: 0 6vw;
+  height: 82px;
+  padding: 0 clamp(28px, 5vw, 80px);
   display: flex;
   position: fixed;
   top: 0;
@@ -4141,19 +4141,19 @@ a {
   background: rgba(244, 247, 240, 0.94);
   border-bottom-color: rgba(8, 45, 43, 0.12);
   box-shadow: 0 8px 32px rgba(3, 30, 27, 0.08);
-  height: 78px;
+  height: 72px;
 }
 .brand {
   position: relative;
-  width: 205px;
-  height: 58px;
+  width: 184px;
+  height: 50px;
   display: block;
 }
 .header img {
   object-fit: contain;
   object-position: left center;
-  width: 205px;
-  height: 58px;
+  width: 184px;
+  height: 50px;
   position: absolute;
   inset: 0;
   transition: opacity 0.25s ease;
@@ -4175,7 +4175,7 @@ a {
 .header nav a {
   letter-spacing: -0.01em;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
   transition:
     opacity 0.2s ease,
     transform 0.2s ease;
@@ -4206,7 +4206,7 @@ a {
 .hero {
   color: #fff;
   height: 100svh;
-  min-height: 720px;
+  min-height: 620px;
   position: relative;
   overflow: hidden;
 }
@@ -4239,7 +4239,7 @@ a {
   inset: 0;
 }
 .hero-copy {
-  max-width: min(900px, 76vw);
+  max-width: min(760px, 72vw);
   opacity: 0;
   pointer-events: none;
   transform: translateY(24px);
@@ -4247,7 +4247,7 @@ a {
     opacity 0.65s ease 0.18s,
     transform 0.65s ease 0.18s;
   position: absolute;
-  bottom: 14vh;
+  bottom: 13vh;
   left: 7vw;
 }
 .hero-copy.active {
@@ -4263,14 +4263,14 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.25em;
   font-size: 12px;
-  font-weight: 800;
+  font-weight: 600;
 }
 .hero h1 {
-  letter-spacing: -0.065em;
-  margin: 22px 0 28px;
-  font-size: clamp(58px, 7.2vw, 112px);
-  font-weight: 600;
-  line-height: 0.9;
+  letter-spacing: -0.045em;
+  margin: 18px 0 24px;
+  font-size: clamp(48px, 5.2vw, 76px);
+  font-weight: 500;
+  line-height: 1.02;
 }
 .hero h1 em {
   color: var(--mint);
@@ -4279,9 +4279,9 @@ a {
 }
 .hero p {
   color: rgba(255, 255, 255, 0.88);
-  max-width: 650px;
-  font-size: clamp(16px, 1.5vw, 20px);
-  line-height: 1.65;
+  max-width: 610px;
+  font-size: clamp(15px, 1.25vw, 18px);
+  line-height: 1.6;
 }
 .button {
   background: var(--mint);
@@ -4289,7 +4289,8 @@ a {
   border-radius: 99px;
   margin-top: 18px;
   padding: 16px 23px;
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 600;
   display: inline-block;
 }
 .scroll-label {
@@ -4327,46 +4328,83 @@ a {
   background: var(--mint);
   width: 64px;
 }
-.statement {
-  grid-template-columns: 1fr 2fr;
-  gap: 3vw;
-  padding: 11vw 7vw 7vw;
+.what-we-do {
+  width: min(1180px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 100px 0 110px;
+}
+.section-heading {
+  grid-template-columns: 0.65fr 1.35fr;
+  align-items: start;
+  gap: 48px;
+  margin-bottom: 54px;
   display: grid;
 }
-.statement h2 {
-  letter-spacing: -0.045em;
-  margin: 0;
-  font-size: clamp(38px, 5vw, 72px);
-  line-height: 1.02;
+.section-heading span {
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  padding-top: 10px;
+  font-size: 11px;
+  font-weight: 600;
 }
-.statement p {
-  grid-column: 2;
-  max-width: 700px;
-  font-size: 18px;
+.section-heading h2 {
+  letter-spacing: -0.035em;
+  max-width: 720px;
+  margin: 0;
+  font-size: clamp(36px, 4vw, 58px);
+  font-weight: 500;
+  line-height: 1.12;
+}
+.impact-video {
+  object-fit: cover;
+  background: #051d1b;
+  border-radius: 18px;
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  display: block;
+}
+.section-intro {
+  max-width: 900px;
+  margin: 34px auto 64px;
+  text-align: center;
+  font-size: 17px;
   line-height: 1.7;
 }
 .service-grid {
-  grid-template-columns: repeat(4, 1fr);
-  min-height: 560px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 56px 30px;
   display: grid;
 }
 .service-grid article {
-  color: #fff;
-  background-position: 50%;
-  background-size: cover;
-  border-right: 1px solid #ffffff40;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 28px;
-  display: flex;
+  min-width: 0;
+  position: relative;
+}
+.service-grid article img {
+  object-fit: cover;
+  border-radius: 14px;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  margin-bottom: 22px;
+  display: block;
+}
+.service-grid article b {
+  color: var(--green);
+  letter-spacing: 0.12em;
+  font-size: 11px;
+  font-weight: 600;
 }
 .service-grid h3 {
-  font-size: 26px;
-  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 10px 0 12px;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.3;
 }
 .service-grid p {
-  font-size: 14px;
-  line-height: 1.55;
+  color: #34504d;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.65;
 }
 .split {
   grid-template-columns: 1.2fr 1fr;
@@ -4381,7 +4419,8 @@ a {
 .split h2,
 .cta h2 {
   letter-spacing: -0.05em;
-  font-size: clamp(40px, 5vw, 72px);
+  font-size: clamp(34px, 4vw, 56px);
+  font-weight: 500;
   line-height: 1;
 }
 .split p {
@@ -4416,8 +4455,9 @@ a {
   letter-spacing: -0.06em;
   max-width: 1000px;
   margin: 24px 0;
-  font-size: clamp(48px, 7vw, 100px);
-  line-height: 0.95;
+  font-size: clamp(42px, 5.5vw, 76px);
+  font-weight: 500;
+  line-height: 1.02;
 }
 .page-hero p {
   color: #c9ded7;
@@ -4588,6 +4628,34 @@ footer small {
   margin-top: 30px;
   padding-top: 24px;
 }
+@media (width<=1100px) and (width>900px) {
+  .header {
+    padding-inline: 30px;
+  }
+  .brand,
+  .header img {
+    width: 160px;
+  }
+  .header nav {
+    gap: 1rem;
+  }
+  .header nav a {
+    font-size: 12px;
+  }
+  .hero-copy {
+    max-width: 680px;
+  }
+  .hero h1 {
+    font-size: 56px;
+  }
+  .what-we-do {
+    width: min(920px, calc(100% - 56px));
+    padding-block: 84px 96px;
+  }
+  .section-heading h2 {
+    font-size: 44px;
+  }
+}
 @media (width<=900px) {
   .header {
     height: 72px;
@@ -4627,7 +4695,7 @@ footer small {
     display: flex;
   }
   .hero {
-    min-height: 680px;
+    min-height: 620px;
   }
   .hero-copy {
     max-width: none;
@@ -4636,8 +4704,8 @@ footer small {
     right: 24px;
   }
   .hero h1 {
-    font-size: clamp(48px, 10vw, 70px);
-    line-height: 0.94;
+    font-size: clamp(42px, 7vw, 56px);
+    line-height: 1.04;
   }
   .hero-controls {
     bottom: 7vh;
@@ -4646,18 +4714,35 @@ footer small {
   .scroll-label {
     display: none;
   }
-  .statement {
-    padding: 90px 24px 60px;
-    display: block;
+  .what-we-do {
+    width: calc(100% - 48px);
+    padding: 76px 0 86px;
   }
-  .statement h2 {
-    margin: 22px 0;
+  .section-heading {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 38px;
+  }
+  .section-heading span {
+    padding-top: 0;
+  }
+  .section-heading h2 {
+    font-size: clamp(34px, 5.5vw, 46px);
+  }
+  .impact-video {
+    border-radius: 14px;
+    aspect-ratio: 16 / 9;
+  }
+  .section-intro {
+    margin: 28px auto 48px;
+    font-size: 16px;
   }
   .service-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 44px 24px;
   }
   .service-grid article {
-    min-height: 430px;
+    min-height: 0;
   }
   .split,
   .editorial,
@@ -4698,7 +4783,7 @@ footer small {
 }
 @media (width<=560px) {
   .hero h1 {
-    font-size: 45px;
+    font-size: clamp(36px, 10.5vw, 43px);
     letter-spacing: -0.055em;
   }
   .hero-copy span {
@@ -4714,9 +4799,32 @@ footer small {
   }
   .service-grid {
     grid-template-columns: 1fr;
+    gap: 42px;
   }
   .service-grid article {
-    min-height: 460px;
+    min-height: 0;
+  }
+  .what-we-do {
+    width: calc(100% - 36px);
+    padding: 64px 0 72px;
+  }
+  .section-heading {
+    margin-bottom: 30px;
+  }
+  .section-heading h2 {
+    font-size: 32px;
+    line-height: 1.16;
+  }
+  .section-intro {
+    text-align: left;
+    margin-bottom: 42px;
+    font-size: 15px;
+  }
+  .service-grid article img {
+    margin-bottom: 18px;
+  }
+  .service-grid h3 {
+    font-size: 19px;
   }
   .split video {
     object-fit: cover;

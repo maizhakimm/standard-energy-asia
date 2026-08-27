@@ -12874,39 +12874,47 @@ function re() {
           ],
         }),
         (0, x.jsxs)(`section`, {
-          className: `statement`,
+          className: `what-we-do`,
           children: [
-            (0, x.jsx)(`span`, { children: `What we do` }),
-            (0, x.jsx)(`h2`, {
-              children: `Climate action, transformed into long-term opportunity.`,
+            (0, x.jsxs)(`div`, {
+              className: `section-heading`,
+              children: [
+                (0, x.jsx)(`span`, { children: `What we do` }),
+                (0, x.jsx)(`h2`, {
+                  children: `Climate action that creates long-term value.`,
+                }),
+              ],
+            }),
+            (0, x.jsx)(`video`, {
+              className: `impact-video`,
+              src: `/media/SEA-version-2.webm`,
+              muted: !0,
+              autoPlay: !0,
+              loop: !0,
+              playsInline: !0,
             }),
             (0, x.jsx)(`p`, {
+              className: `section-intro`,
               children: `We develop and implement comprehensive emission reduction projects and strategies for companies, governments and organisations around the world.`,
             }),
-          ],
-        }),
-        (0, x.jsx)(`section`, {
-          className: `service-grid`,
-          children: S.map(([e, t, n, r]) =>
-            (0, x.jsxs)(
-              `article`,
-              {
-                style: {
-                  backgroundImage: `linear-gradient(180deg,transparent 25%,rgba(0,25,25,.92)),url(${r})`,
-                },
-                children: [
-                  (0, x.jsx)(`b`, { children: e }),
-                  (0, x.jsxs)(`div`, {
+            (0, x.jsx)(`div`, {
+              className: `service-grid`,
+              children: S.map(([e, t, n, r]) =>
+                (0, x.jsxs)(
+                  `article`,
+                  {
                     children: [
+                      (0, x.jsx)(`img`, { src: r, alt: t }),
+                      (0, x.jsx)(`b`, { children: e }),
                       (0, x.jsx)(`h3`, { children: t }),
                       (0, x.jsx)(`p`, { children: n }),
                     ],
-                  }),
-                ],
-              },
-              e,
-            ),
-          ),
+                  },
+                  e,
+                ),
+              ),
+            }),
+          ],
         }),
         (0, x.jsxs)(`section`, {
           className: `split`,
