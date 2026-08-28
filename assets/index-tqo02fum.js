@@ -13106,31 +13106,87 @@ function w() {
 function ie() {
   return (0, x.jsxs)(x.Fragment, {
     children: [
-      (0, x.jsx)(ne, {
-        eyebrow: `Our Services`,
-        title: `Practical pathways to measurable climate impact.`,
-        text: `A comprehensive suite of services designed to help businesses achieve sustainability goals and contribute to a cleaner future.`,
+      (0, x.jsxs)(`section`, {
+        className: `services-intro`,
+        children: [
+          (0, x.jsxs)(`div`, {
+            className: `about-breadcrumb`,
+            children: [
+              (0, x.jsx)(`a`, { href: `/`, children: `Home` }),
+              (0, x.jsx)(`span`, { children: `/` }),
+              (0, x.jsx)(`b`, { children: `Our Services` }),
+            ],
+          }),
+          (0, x.jsx)(`span`, {
+            className: `services-eyebrow`,
+            children: `What we do`,
+          }),
+          (0, x.jsx)(`h1`, {
+            children: `Practical pathways to measurable climate impact.`,
+          }),
+          (0, x.jsx)(`p`, {
+            children: `Our services help businesses understand their environmental impact, take credible action and build sustainability into long-term decision-making.`,
+          }),
+        ],
       }),
-      (0, x.jsx)(`section`, {
+      (0, x.jsxs)(`section`, {
         className: `service-list`,
-        children: S.map(([e, t, n, r]) =>
-          (0, x.jsxs)(
-            `article`,
-            {
-              children: [
-                (0, x.jsx)(`img`, { src: r, alt: `` }),
-                (0, x.jsxs)(`div`, {
+        children: [
+          (0, x.jsxs)(`div`, {
+            className: `services-heading`,
+            children: [
+              (0, x.jsx)(`span`, { children: `Our capabilities` }),
+              (0, x.jsx)(`h2`, {
+                children: `From understanding your footprint to building a credible strategy.`,
+              }),
+            ],
+          }),
+          (0, x.jsx)(`div`, {
+            className: `service-rows`,
+            children: S.map(([e, t, n, r]) =>
+              (0, x.jsxs)(
+                `article`,
+                {
                   children: [
-                    (0, x.jsx)(`b`, { children: e }),
-                    (0, x.jsx)(`h2`, { children: t }),
-                    (0, x.jsx)(`p`, { children: n }),
+                    (0, x.jsx)(`div`, {
+                      className: `service-image`,
+                      children: (0, x.jsx)(`img`, { src: r, alt: t }),
+                    }),
+                    (0, x.jsxs)(`div`, {
+                      className: `service-copy`,
+                      children: [
+                        (0, x.jsx)(`b`, { children: e }),
+                        (0, x.jsx)(`h3`, { children: t }),
+                        (0, x.jsx)(`p`, { children: n }),
+                        (0, x.jsx)(`a`, {
+                          href: `/contact-us`,
+                          children: `Discuss this service →`,
+                        }),
+                      ],
+                    }),
                   ],
-                }),
-              ],
-            },
-            e,
-          ),
-        ),
+                },
+                e,
+              ),
+            ),
+          }),
+        ],
+      }),
+      (0, x.jsxs)(`section`, {
+        className: `cta services-cta`,
+        children: [
+          (0, x.jsx)(`h2`, {
+            children: `Ready to turn ambition into action?`,
+          }),
+          (0, x.jsx)(`p`, {
+            children: `Talk to our team about the right pathway for your organisation’s sustainability goals.`,
+          }),
+          (0, x.jsx)(`a`, {
+            className: `button light`,
+            href: `/contact-us`,
+            children: `Start a conversation`,
+          }),
+        ],
       }),
     ],
   });

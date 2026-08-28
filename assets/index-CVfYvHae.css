@@ -4588,31 +4588,128 @@ a {
 .values h3 {
   font-size: 27px;
 }
+.services-intro {
+  width: min(1180px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 132px 0 62px;
+  border-bottom: 1px solid #d9e1dd;
+}
+.services-eyebrow,
+.services-heading > span {
+  color: #168b72;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.services-intro h1 {
+  max-width: 940px;
+  margin: 18px 0 24px;
+  color: #073d38;
+  font-size: clamp(40px, 4.2vw, 60px);
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: -0.045em;
+}
+.services-intro > p {
+  max-width: 880px;
+  margin: 0;
+  color: #344b46;
+  font-size: 16px;
+  line-height: 1.75;
+}
 .service-list {
-  padding: 8vw 7vw;
+  width: min(1180px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 72px 0 62px;
 }
-.service-list article {
-  border-bottom: 1px solid var(--line);
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 6vw;
-  padding: 5vw 0;
+.services-heading {
   display: grid;
+  grid-template-columns: minmax(140px, 0.42fr) minmax(0, 1.58fr);
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 54px;
 }
-.service-list article:nth-child(2n) img {
+.services-heading > span {
+  padding-top: 9px;
+}
+.services-heading h2 {
+  max-width: 760px;
+  margin: 0;
+  color: #073d38;
+  font-size: clamp(32px, 3.6vw, 48px);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+.service-rows {
+  border-top: 1px solid #d9e1dd;
+}
+.service-rows article {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: clamp(42px, 7vw, 94px);
+  align-items: center;
+  padding: 58px 0;
+  border-bottom: 1px solid #d9e1dd;
+}
+.service-rows article:nth-child(even) .service-image {
   order: 2;
 }
-.service-list img {
-  object-fit: cover;
+.service-image {
+  overflow: hidden;
+  border-radius: 18px;
+}
+.service-image img {
+  display: block;
   width: 100%;
-  height: 420px;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform 0.6s ease;
 }
-.service-list h2 {
-  font-size: 45px;
+.service-rows article:hover .service-image img {
+  transform: scale(1.025);
 }
-.service-list p {
-  font-size: 17px;
-  line-height: 1.7;
+.service-copy b {
+  color: #168b72;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+}
+.service-copy h3 {
+  max-width: 480px;
+  margin: 13px 0 16px;
+  color: #102f2b;
+  font-size: clamp(27px, 3vw, 40px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+.service-copy p {
+  max-width: 520px;
+  margin: 0;
+  color: #53645f;
+  font-size: 15px;
+  line-height: 1.75;
+}
+.service-copy a {
+  display: inline-block;
+  margin-top: 24px;
+  padding-bottom: 5px;
+  color: #0b4b43;
+  border-bottom: 1px solid #8db8ae;
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+.service-copy a:hover {
+  color: #168b72;
+  border-color: #168b72;
+}
+.services-cta {
+  margin-top: 0;
 }
 .awards {
   grid-template-columns: 1fr 1fr;
@@ -4869,7 +4966,7 @@ footer small {
   }
   .split,
   .editorial,
-  .service-list article {
+  .service-rows article {
     grid-template-columns: 1fr;
     padding: 80px 24px;
   }
@@ -4884,10 +4981,29 @@ footer small {
   .editorial img {
     height: 400px;
   }
+  .services-intro,
   .service-list {
-    padding: 50px 24px;
+    width: min(100% - 48px, 760px);
   }
-  .service-list article:nth-child(2n) img {
+  .services-intro {
+    padding: 112px 0 52px;
+  }
+  .service-list {
+    padding: 58px 0 50px;
+  }
+  .services-heading {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+  .services-heading > span {
+    padding-top: 0;
+  }
+  .service-rows article {
+    gap: 28px;
+    padding: 44px 0;
+  }
+  .service-rows article:nth-child(even) .service-image {
     order: 0;
   }
   .values,
@@ -4968,6 +5084,37 @@ footer small {
   .what-we-do {
     width: calc(100% - 36px);
     padding: 64px 0 72px;
+  }
+  .services-intro,
+  .service-list {
+    width: calc(100% - 36px);
+  }
+  .services-intro {
+    padding: 98px 0 42px;
+  }
+  .services-intro h1 {
+    margin: 14px 0 18px;
+    font-size: 36px;
+  }
+  .services-intro > p {
+    font-size: 15px;
+    line-height: 1.68;
+  }
+  .service-list {
+    padding: 46px 0 42px;
+  }
+  .services-heading h2 {
+    font-size: 31px;
+  }
+  .service-rows article {
+    gap: 23px;
+    padding: 35px 0;
+  }
+  .service-image {
+    border-radius: 14px;
+  }
+  .service-copy h3 {
+    font-size: 28px;
   }
   .section-heading {
     margin-bottom: 30px;
