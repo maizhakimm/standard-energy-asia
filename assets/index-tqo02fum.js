@@ -12812,6 +12812,24 @@ function ne({ eyebrow: e, title: t, text: n }) {
     ],
   });
 }
+function de({ current: e, eyebrow: t, title: n, text: r }) {
+  return (0, x.jsxs)(`section`, {
+    className: `inner-intro`,
+    children: [
+      (0, x.jsxs)(`div`, {
+        className: `about-breadcrumb`,
+        children: [
+          (0, x.jsx)(`a`, { href: `/`, children: `Home` }),
+          (0, x.jsx)(`span`, { children: `/` }),
+          (0, x.jsx)(`b`, { children: e }),
+        ],
+      }),
+      (0, x.jsx)(`span`, { className: `inner-eyebrow`, children: t }),
+      (0, x.jsx)(`h1`, { children: n }),
+      (0, x.jsx)(`p`, { children: r }),
+    ],
+  });
+}
 function re() {
   let [e, t] = (0, b.useState)(0);
   return (
@@ -13106,28 +13124,11 @@ function w() {
 function ie() {
   return (0, x.jsxs)(x.Fragment, {
     children: [
-      (0, x.jsxs)(`section`, {
-        className: `services-intro`,
-        children: [
-          (0, x.jsxs)(`div`, {
-            className: `about-breadcrumb`,
-            children: [
-              (0, x.jsx)(`a`, { href: `/`, children: `Home` }),
-              (0, x.jsx)(`span`, { children: `/` }),
-              (0, x.jsx)(`b`, { children: `Our Services` }),
-            ],
-          }),
-          (0, x.jsx)(`span`, {
-            className: `services-eyebrow`,
-            children: `What we do`,
-          }),
-          (0, x.jsx)(`h1`, {
-            children: `Practical pathways to measurable climate impact.`,
-          }),
-          (0, x.jsx)(`p`, {
-            children: `Our services help businesses understand their environmental impact, take credible action and build sustainability into long-term decision-making.`,
-          }),
-        ],
+      (0, x.jsx)(de, {
+        current: `Our Services`,
+        eyebrow: `What we do`,
+        title: `Practical pathways to measurable climate impact.`,
+        text: `Our services help businesses understand their environmental impact, take credible action and build sustainability into long-term decision-making.`,
       }),
       (0, x.jsxs)(`section`, {
         className: `service-list`,
@@ -13194,7 +13195,8 @@ function ie() {
 function ae() {
   return (0, x.jsxs)(x.Fragment, {
     children: [
-      (0, x.jsx)(ne, {
+      (0, x.jsx)(de, {
+        current: `Awards`,
         eyebrow: `Awards`,
         title: `Achievements in driving a sustainable future.`,
         text: `Recognised for innovation, leadership and impact in carbon offset solutions across Malaysia and beyond.`,
@@ -13204,10 +13206,14 @@ function ae() {
         children: [
           (0, x.jsxs)(`article`, {
             children: [
-              (0, x.jsx)(`img`, {
-                src: `/media/Award-CEO-Monthly-2.png`,
-                alt: `Best Carbon Offset Solution Business Leader 2024 award`,
+              (0, x.jsx)(`div`, {
+                className: `award-image`,
+                children: (0, x.jsx)(`img`, {
+                  src: `/media/Award-CEO-Monthly-2.png`,
+                  alt: `Best Carbon Offset Solution Business Leader 2024 award`,
+                }),
               }),
+              (0, x.jsx)(`b`, { children: `01 / Leadership` }),
               (0, x.jsx)(`h2`, { children: `Chairperson Award` }),
               (0, x.jsx)(`p`, {
                 children: `Best Carbon Offset Solution Business Leader 2024 (Malaysia)`,
@@ -13228,10 +13234,14 @@ function ae() {
           }),
           (0, x.jsxs)(`article`, {
             children: [
-              (0, x.jsx)(`img`, {
-                src: `/media/Award-APAC.png`,
-                alt: `Community Impact Excellence Award 2025`,
+              (0, x.jsx)(`div`, {
+                className: `award-image`,
+                children: (0, x.jsx)(`img`, {
+                  src: `/media/Award-APAC.png`,
+                  alt: `Community Impact Excellence Award 2025`,
+                }),
               }),
+              (0, x.jsx)(`b`, { children: `02 / Innovation` }),
               (0, x.jsx)(`h2`, {
                 children: `Community Impact Excellence Award 2025`,
               }),
@@ -13242,13 +13252,30 @@ function ae() {
           }),
         ],
       }),
+      (0, x.jsxs)(`section`, {
+        className: `cta inner-cta`,
+        children: [
+          (0, x.jsx)(`h2`, {
+            children: `Progress recognised. Impact continued.`,
+          }),
+          (0, x.jsx)(`p`, {
+            children: `We remain focused on practical climate action and meaningful outcomes for businesses and communities.`,
+          }),
+          (0, x.jsx)(`a`, {
+            className: `button light`,
+            href: `/about-us`,
+            children: `Discover our approach`,
+          }),
+        ],
+      }),
     ],
   });
 }
 function oe() {
   return (0, x.jsxs)(x.Fragment, {
     children: [
-      (0, x.jsx)(ne, {
+      (0, x.jsx)(de, {
+        current: `News`,
         eyebrow: `News`,
         title: `Latest from Standard Energy Asia.`,
         text: `Company developments, climate action initiatives and sustainability highlights.`,
@@ -13264,12 +13291,31 @@ function oe() {
                   src: `/media/News-0${e}.jpg`,
                   alt: `Standard Energy Asia news ${e}`,
                 }),
-                (0, x.jsx)(`span`, { children: `News & Updates` }),
+                (0, x.jsxs)(`div`, {
+                  children: [
+                    (0, x.jsx)(`b`, { children: `0${e}` }),
+                    (0, x.jsx)(`span`, { children: `News & Updates` }),
+                  ],
+                }),
               ],
             },
             e,
           ),
         ),
+      }),
+      (0, x.jsxs)(`section`, {
+        className: `cta inner-cta`,
+        children: [
+          (0, x.jsx)(`h2`, { children: `Stay connected with our work.` }),
+          (0, x.jsx)(`p`, {
+            children: `Connect with our team to learn more about current initiatives and sustainability programmes.`,
+          }),
+          (0, x.jsx)(`a`, {
+            className: `button light`,
+            href: `/contact-us`,
+            children: `Contact our team`,
+          }),
+        ],
       }),
     ],
   });
@@ -13277,17 +13323,50 @@ function oe() {
 function se() {
   return (0, x.jsxs)(x.Fragment, {
     children: [
-      (0, x.jsx)(ne, {
+      (0, x.jsx)(de, {
+        current: `Sponsorship`,
         eyebrow: `Sponsorship`,
         title: `Supporting initiatives that move communities forward.`,
         text: `Our commitment to positive impact extends beyond projects through meaningful community participation.`,
       }),
       (0, x.jsx)(`section`, {
         className: `sponsor`,
-        children: (0, x.jsx)(`img`, {
-          src: `/media/K1-SA-25-KUALA-LUMPUR-C.jpg`,
-          alt: `Standard Energy Asia sponsorship initiative`,
+        children: (0, x.jsxs)(`div`, {
+          className: `sponsor-card`,
+          children: [
+            (0, x.jsx)(`img`, {
+              src: `/media/K1-SA-25-KUALA-LUMPUR-C.jpg`,
+              alt: `Standard Energy Asia sponsorship initiative`,
+            }),
+            (0, x.jsxs)(`div`, {
+              children: [
+                (0, x.jsx)(`b`, { children: `Community participation` }),
+                (0, x.jsx)(`h2`, {
+                  children: `Positive impact beyond projects.`,
+                }),
+                (0, x.jsx)(`p`, {
+                  children: `Our commitment extends beyond our core work through meaningful participation in initiatives that support people and communities.`,
+                }),
+              ],
+            }),
+          ],
         }),
+      }),
+      (0, x.jsxs)(`section`, {
+        className: `cta inner-cta`,
+        children: [
+          (0, x.jsx)(`h2`, {
+            children: `Let’s create meaningful impact together.`,
+          }),
+          (0, x.jsx)(`p`, {
+            children: `Speak with our team about sponsorship and community collaboration opportunities.`,
+          }),
+          (0, x.jsx)(`a`, {
+            className: `button light`,
+            href: `/contact-us`,
+            children: `Start a conversation`,
+          }),
+        ],
       }),
     ],
   });
@@ -13295,7 +13374,8 @@ function se() {
 function ce() {
   return (0, x.jsxs)(x.Fragment, {
     children: [
-      (0, x.jsx)(ne, {
+      (0, x.jsx)(de, {
+        current: `Contact Us`,
         eyebrow: `Contact Us`,
         title: `Let’s turn sustainability ambition into action.`,
         text: `Talk to our team about carbon management, waste management and resource recovery solutions.`,
@@ -13305,6 +13385,7 @@ function ce() {
         children: [
           (0, x.jsxs)(`div`, {
             children: [
+              (0, x.jsx)(`b`, { children: `01` }),
               (0, x.jsx)(`h2`, { children: `Main Branch` }),
               (0, x.jsxs)(`p`, {
                 children: [
@@ -13317,6 +13398,7 @@ function ce() {
           }),
           (0, x.jsxs)(`div`, {
             children: [
+              (0, x.jsx)(`b`, { children: `02` }),
               (0, x.jsx)(`h2`, { children: `Kelantan Branch` }),
               (0, x.jsxs)(`p`, {
                 children: [
@@ -13329,6 +13411,7 @@ function ce() {
           }),
           (0, x.jsxs)(`div`, {
             children: [
+              (0, x.jsx)(`b`, { children: `03` }),
               (0, x.jsx)(`h2`, { children: `Reach us` }),
               (0, x.jsx)(`a`, {
                 href: `tel:+60364199711`,

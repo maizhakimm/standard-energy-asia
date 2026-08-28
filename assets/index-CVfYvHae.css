@@ -4588,13 +4588,13 @@ a {
 .values h3 {
   font-size: 27px;
 }
-.services-intro {
+.inner-intro {
   width: min(1180px, calc(100% - 64px));
   margin: 0 auto;
   padding: 132px 0 62px;
   border-bottom: 1px solid #d9e1dd;
 }
-.services-eyebrow,
+.inner-eyebrow,
 .services-heading > span {
   color: #168b72;
   font-size: 11px;
@@ -4602,7 +4602,7 @@ a {
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
-.services-intro h1 {
+.inner-intro h1 {
   max-width: 940px;
   margin: 18px 0 24px;
   color: #073d38;
@@ -4611,7 +4611,7 @@ a {
   line-height: 1.06;
   letter-spacing: -0.045em;
 }
-.services-intro > p {
+.inner-intro > p {
   max-width: 880px;
   margin: 0;
   color: #344b46;
@@ -4712,22 +4712,61 @@ a {
   margin-top: 0;
 }
 .awards {
-  grid-template-columns: 1fr 1fr;
-  gap: 3vw;
-  padding: 8vw 7vw;
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  width: min(1180px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 68px 0 58px;
 }
 .awards article {
+  overflow: hidden;
+  padding: 34px;
   background: #fff;
-  padding: 4vw;
+  border: 1px solid rgba(8, 45, 43, 0.08);
+  border-radius: 18px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
-.awards > article > img {
-  object-fit: contain;
+.awards article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 44px rgba(6, 38, 35, 0.1);
+}
+.award-image {
+  display: grid;
+  min-height: 330px;
+  margin: -34px -34px 30px;
+  padding: 32px;
+  background: #eef3f1;
+  place-items: center;
+}
+.award-image img {
   width: 100%;
-  height: 320px;
+  height: 280px;
+  object-fit: contain;
+}
+.awards article > b,
+.sponsor-card b,
+.contact b {
+  color: #168b72;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 .awards h2 {
-  font-size: 30px;
+  margin: 12px 0 10px;
+  color: #102f2b;
+  font-size: clamp(25px, 2.5vw, 34px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+.awards article > p {
+  color: #53645f;
+  font-size: 14px;
+  line-height: 1.65;
 }
 .person {
   align-items: center;
@@ -4741,49 +4780,130 @@ a {
   width: 64px;
   height: 64px;
 }
+.person span {
+  color: #344b46;
+  font-size: 13px;
+  font-weight: 500;
+}
 .news-grid {
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2vw;
-  padding: 8vw 7vw;
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  width: min(1180px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 68px 0 58px;
 }
 .news-grid article {
+  overflow: hidden;
   background: #fff;
+  border: 1px solid rgba(8, 45, 43, 0.08);
+  border-radius: 18px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.news-grid article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 44px rgba(6, 38, 35, 0.1);
 }
 .news-grid img {
-  aspect-ratio: 16/10;
-  object-fit: cover;
+  display: block;
   width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.news-grid article:hover img {
+  transform: scale(1.025);
+}
+.news-grid article > div {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 22px 24px;
+}
+.news-grid b {
+  color: #168b72;
+  font-size: 11px;
+  letter-spacing: 0.14em;
 }
 .news-grid span {
-  padding: 22px;
-  font-weight: 800;
-  display: block;
+  color: #102f2b;
+  font-size: 15px;
+  font-weight: 600;
 }
 .sponsor {
-  padding: 8vw 7vw;
+  width: min(1180px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 68px 0 58px;
 }
-.sponsor img {
+.sponsor-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(38px, 6vw, 82px);
+  align-items: center;
+  padding: 38px;
+  background: #eef3f1;
+  border-radius: 20px;
+}
+.sponsor-card img {
+  display: block;
+  width: 100%;
+  max-height: 620px;
   object-fit: contain;
   background: #fff;
-  width: 100%;
-  max-height: 750px;
+  border-radius: 14px;
+}
+.sponsor-card h2 {
+  margin: 14px 0 16px;
+  color: #073d38;
+  font-size: clamp(30px, 3.5vw, 46px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+.sponsor-card p {
+  margin: 0;
+  color: #53645f;
+  font-size: 15px;
+  line-height: 1.75;
 }
 .contact {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2vw;
-  padding: 8vw 7vw;
   display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  width: min(1180px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 68px 0 72px;
 }
 .contact div {
+  min-height: 240px;
+  padding: 32px;
   background: #fff;
-  padding: 3vw;
+  border: 1px solid rgba(8, 45, 43, 0.08);
+  border-radius: 18px;
+}
+.contact h2 {
+  margin: 28px 0 14px;
+  color: #102f2b;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
 }
 .contact p,
 .contact a {
-  margin-bottom: 10px;
-  line-height: 1.7;
   display: block;
+  margin: 0 0 10px;
+  color: #53645f;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.contact a {
+  width: fit-content;
+  border-bottom: 1px solid #a8c5be;
+}
+.inner-cta {
+  margin-top: 0;
 }
 footer {
   color: var(--ink);
@@ -4981,11 +5101,11 @@ footer small {
   .editorial img {
     height: 400px;
   }
-  .services-intro,
+  .inner-intro,
   .service-list {
     width: min(100% - 48px, 760px);
   }
-  .services-intro {
+  .inner-intro {
     padding: 112px 0 52px;
   }
   .service-list {
@@ -5013,15 +5133,20 @@ footer small {
   }
   .news-grid {
     grid-template-columns: 1fr;
-    padding: 60px 24px;
+  }
+  .awards,
+  .news-grid,
+  .sponsor,
+  .contact {
+    width: min(100% - 48px, 760px);
+    padding: 56px 0 48px;
+  }
+  .sponsor-card {
+    grid-template-columns: 1fr;
+    padding: 30px;
   }
   .page-hero {
     padding: 145px 24px 75px;
-  }
-  .awards,
-  .contact,
-  .sponsor {
-    padding: 60px 24px;
   }
   footer {
     grid-template-columns: 1fr;
@@ -5085,18 +5210,18 @@ footer small {
     width: calc(100% - 36px);
     padding: 64px 0 72px;
   }
-  .services-intro,
+  .inner-intro,
   .service-list {
     width: calc(100% - 36px);
   }
-  .services-intro {
+  .inner-intro {
     padding: 98px 0 42px;
   }
-  .services-intro h1 {
+  .inner-intro h1 {
     margin: 14px 0 18px;
     font-size: 36px;
   }
-  .services-intro > p {
+  .inner-intro > p {
     font-size: 15px;
     line-height: 1.68;
   }
@@ -5115,6 +5240,40 @@ footer small {
   }
   .service-copy h3 {
     font-size: 28px;
+  }
+  .awards,
+  .news-grid,
+  .sponsor,
+  .contact {
+    width: calc(100% - 36px);
+    padding: 42px 0 38px;
+  }
+  .awards,
+  .news-grid {
+    gap: 20px;
+  }
+  .awards article {
+    padding: 24px;
+  }
+  .award-image {
+    min-height: 260px;
+    margin: -24px -24px 24px;
+    padding: 24px;
+  }
+  .award-image img {
+    height: 220px;
+  }
+  .sponsor-card {
+    gap: 28px;
+    padding: 22px;
+    border-radius: 16px;
+  }
+  .sponsor-card h2 {
+    font-size: 31px;
+  }
+  .contact div {
+    min-height: 0;
+    padding: 26px;
   }
   .section-heading {
     margin-bottom: 30px;
