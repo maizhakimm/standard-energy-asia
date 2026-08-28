@@ -13415,36 +13415,100 @@ function ae() {
   });
 }
 function oe() {
+  let e = [
+    {
+      source: `Berita Harian`,
+      title: `Kelantan bakal miliki kilang pengeluaran biofuel bertaraf dunia`,
+      image: `/media/News-01.jpg`,
+      url: `https://www.bharian.com.my/bisnes/korporat/2024/11/1321328/kelantan-bakal-miliki-kilang-pengeluaran-biofuel-bertaraf-dunia`,
+    },
+    {
+      source: `PanduLaju`,
+      title: `Kelantan sokong penggunaan motosikal EV demi teknologi hijau`,
+      image: `/media/News-02.jpg`,
+      url: `https://pandulaju.com.my/kelantan-sokong-guna-motosikal-ev-demi-perkara-teknologi-hijau/`,
+    },
+    {
+      source: `Utusan Malaysia`,
+      title: `NHEV, SEA bekerjasama promosi motosikal EBIXON EV`,
+      image: `/media/News-03.jpg`,
+      url: `https://www.utusan.com.my/ekonomi/2024/10/nhevt-sea-bekerjasama-promosi-motosikal-ebixon-ev/`,
+    },
+    {
+      source: `Sinar Harian`,
+      title: `Kelantan sokong produk motosikal EV, sahut teknologi hijau`,
+      image: `/media/News-04.jpg`,
+      url: `https://www.sinarharian.com.my/article/694076/edisi/kelantan/kelantan-sokong-produk-motosikal-ev-sahut-teknologi-hijau`,
+    },
+  ];
   return (0, x.jsxs)(x.Fragment, {
     children: [
       (0, x.jsx)(de, {
         current: `News`,
-        eyebrow: `News`,
-        title: `Latest from Standard Energy Asia.`,
-        text: `Company developments, climate action initiatives and sustainability highlights.`,
+        eyebrow: `News & media`,
+        title: `Stories shaping a more sustainable future.`,
+        text: `Media coverage of our partnerships, technology initiatives and progress across clean energy and sustainable mobility.`,
       }),
-      (0, x.jsx)(`section`, {
-        className: `news-grid`,
-        children: [1, 2, 3, 4].map((e) =>
-          (0, x.jsxs)(
-            `article`,
-            {
-              children: [
-                (0, x.jsx)(`img`, {
-                  src: `/media/News-0${e}.jpg`,
-                  alt: `Standard Energy Asia news ${e}`,
-                }),
-                (0, x.jsxs)(`div`, {
-                  children: [
-                    (0, x.jsx)(`b`, { children: `0${e}` }),
-                    (0, x.jsx)(`span`, { children: `News & Updates` }),
-                  ],
-                }),
-              ],
-            },
-            e,
-          ),
-        ),
+      (0, x.jsxs)(`section`, {
+        className: `news-section`,
+        children: [
+          (0, x.jsxs)(`header`, {
+            children: [
+              (0, x.jsx)(`span`, { children: `In the media` }),
+              (0, x.jsx)(`h2`, { children: `Coverage and company highlights.` }),
+              (0, x.jsx)(`p`, {
+                children: `Select a story to read the full article on the publisher’s website.`,
+              }),
+            ],
+          }),
+          (0, x.jsx)(`div`, {
+            className: `news-grid`,
+            children: e.map((e, t) =>
+              (0, x.jsx)(
+                `article`,
+                {
+                  className: 0 === t ? `news-featured` : ``,
+                  children: (0, x.jsxs)(`a`, {
+                    href: e.url,
+                    target: `_blank`,
+                    rel: `noopener noreferrer`,
+                    'aria-label': `${e.title} — opens in a new tab`,
+                    children: [
+                      (0, x.jsx)(`div`, {
+                        className: `news-image`,
+                        children: (0, x.jsx)(`img`, {
+                          src: e.image,
+                          alt: e.title,
+                        }),
+                      }),
+                      (0, x.jsxs)(`div`, {
+                        className: `news-copy`,
+                        children: [
+                          (0, x.jsxs)(`div`, {
+                            className: `news-meta`,
+                            children: [
+                              (0, x.jsx)(`b`, {
+                                children: `${String(t + 1).padStart(2, `0`)} / Media coverage`,
+                              }),
+                              (0, x.jsx)(`span`, { children: `↗` }),
+                            ],
+                          }),
+                          (0, x.jsx)(`p`, { children: e.source }),
+                          (0, x.jsx)(`h3`, { children: e.title }),
+                          (0, x.jsx)(`span`, {
+                            className: `news-link`,
+                            children: `Read full article`,
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                },
+                e.url,
+              ),
+            ),
+          }),
+        ],
       }),
       (0, x.jsxs)(`section`, {
         className: `cta inner-cta`,
