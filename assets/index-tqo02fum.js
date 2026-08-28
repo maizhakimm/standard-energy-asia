@@ -13286,56 +13286,110 @@ function ae() {
     children: [
       (0, x.jsx)(de, {
         current: `Awards`,
-        eyebrow: `Awards`,
-        title: `Achievements in driving a sustainable future.`,
-        text: `Recognised for innovation, leadership and impact in carbon offset solutions across Malaysia and beyond.`,
+        eyebrow: `Recognition`,
+        title: `Achievements that reflect our commitment to impact.`,
+        text: `Recognition for leadership, innovation and meaningful progress in carbon offset and renewable energy solutions in Malaysia.`,
       }),
       (0, x.jsxs)(`section`, {
-        className: `awards`,
+        className: `awards-showcase`,
         children: [
-          (0, x.jsxs)(`article`, {
+          (0, x.jsxs)(`header`, {
             children: [
-              (0, x.jsx)(`div`, {
-                className: `award-image`,
-                children: (0, x.jsx)(`img`, {
-                  src: `/media/Award-CEO-Monthly-2.png`,
-                  alt: `Best Carbon Offset Solution Business Leader 2024 award`,
-                }),
+              (0, x.jsx)(`span`, { children: `Our achievements` }),
+              (0, x.jsx)(`h2`, {
+                children: `Celebrating leadership and innovation.`,
               }),
-              (0, x.jsx)(`b`, { children: `01 / Leadership` }),
-              (0, x.jsx)(`h2`, { children: `Chairperson Award` }),
               (0, x.jsx)(`p`, {
-                children: `Best Carbon Offset Solution Business Leader 2024 (Malaysia)`,
-              }),
-              (0, x.jsxs)(`div`, {
-                className: `person`,
-                children: [
-                  (0, x.jsx)(`img`, {
-                    src: `/media/DR-ZAHAR.png`,
-                    alt: `Dr Ahmad Zaharuddin Sani Ahmad Sabri`,
-                  }),
-                  (0, x.jsx)(`span`, {
-                    children: `Dr Ahmad Zaharuddin Sani Ahmad Sabri`,
-                  }),
-                ],
+                children: `Each recognition strengthens our responsibility to keep delivering credible, practical sustainability outcomes.`,
               }),
             ],
           }),
-          (0, x.jsxs)(`article`, {
+          (0, x.jsxs)(`div`, {
+            className: `award-list`,
             children: [
-              (0, x.jsx)(`div`, {
-                className: `award-image`,
-                children: (0, x.jsx)(`img`, {
-                  src: `/media/Award-APAC.png`,
-                  alt: `Community Impact Excellence Award 2025`,
-                }),
+              (0, x.jsxs)(`article`, {
+                className: `award-feature award-leadership`,
+                children: [
+                  (0, x.jsxs)(`div`, {
+                    className: `award-visual`,
+                    children: [
+                      (0, x.jsx)(`img`, {
+                        className: `award-mark`,
+                        src: `/media/Award-CEO-Monthly-2.png`,
+                        alt: `CEO Monthly Best Carbon Offset Solutions Business Leader 2024 Malaysia`,
+                      }),
+                      (0, x.jsx)(`img`, {
+                        className: `award-portrait`,
+                        src: `/media/DR-ZAHAR.png`,
+                        alt: `Dr Ahmad Zaharuddin Sani Ahmad Sabri`,
+                      }),
+                    ],
+                  }),
+                  (0, x.jsxs)(`div`, {
+                    className: `award-copy`,
+                    children: [
+                      (0, x.jsxs)(`div`, {
+                        className: `award-meta`,
+                        children: [
+                          (0, x.jsx)(`b`, { children: `01 / Leadership` }),
+                          (0, x.jsx)(`span`, { children: `2024 · Malaysia` }),
+                        ],
+                      }),
+                      (0, x.jsx)(`p`, { children: `CEO Monthly` }),
+                      (0, x.jsx)(`h2`, { children: `Chairperson Award` }),
+                      (0, x.jsx)(`h3`, {
+                        children: `Best Carbon Offset Solutions Business Leader 2024`,
+                      }),
+                      (0, x.jsx)(`div`, {
+                        className: `award-recipient`,
+                        children: (0, x.jsxs)(`span`, {
+                          children: [
+                            (0, x.jsx)(`small`, {
+                              children: `Award recipient`,
+                            }),
+                            `Dr Ahmad Zaharuddin Sani Ahmad Sabri`,
+                          ],
+                        }),
+                      }),
+                    ],
+                  }),
+                ],
               }),
-              (0, x.jsx)(`b`, { children: `02 / Innovation` }),
-              (0, x.jsx)(`h2`, {
-                children: `Community Impact Excellence Award 2025`,
-              }),
-              (0, x.jsx)(`p`, {
-                children: `Leading Innovator in Renewable Energy Solutions (Malaysia)`,
+              (0, x.jsxs)(`article`, {
+                className: `award-feature award-innovation`,
+                children: [
+                  (0, x.jsx)(`div`, {
+                    className: `award-visual`,
+                    children: (0, x.jsx)(`img`, {
+                      className: `award-mark`,
+                      src: `/media/Award-APAC.png`,
+                      alt: `APAC Insider Leading Innovator in Renewable Energy Solutions 2025 Malaysia`,
+                    }),
+                  }),
+                  (0, x.jsxs)(`div`, {
+                    className: `award-copy`,
+                    children: [
+                      (0, x.jsxs)(`div`, {
+                        className: `award-meta`,
+                        children: [
+                          (0, x.jsx)(`b`, { children: `02 / Innovation` }),
+                          (0, x.jsx)(`span`, { children: `2025 · Malaysia` }),
+                        ],
+                      }),
+                      (0, x.jsx)(`p`, { children: `APAC Insider` }),
+                      (0, x.jsx)(`h2`, {
+                        children: `Community Impact Excellence Award 2025`,
+                      }),
+                      (0, x.jsx)(`h3`, {
+                        children: `Leading Innovator in Renewable Energy Solutions`,
+                      }),
+                      (0, x.jsx)(`p`, {
+                        className: `award-note`,
+                        children: `An organisational recognition for Standard Energy Asia.`,
+                      }),
+                    ],
+                  }),
+                ],
               }),
             ],
           }),

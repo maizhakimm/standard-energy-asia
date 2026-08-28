@@ -4806,42 +4806,122 @@ a {
   font-size: 14px;
   line-height: 1.65;
 }
-.awards {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
+.awards-showcase {
   width: min(1180px, calc(100% - 64px));
   margin: 0 auto;
-  padding: 68px 0 58px;
+  padding: 78px 0 72px;
 }
-.awards article {
+.awards-showcase > header {
+  display: grid;
+  grid-template-columns: 0.72fr 1.45fr 1fr;
+  gap: 38px;
+  align-items: start;
+  margin-bottom: 46px;
+}
+.awards-showcase > header > span {
+  padding-top: 9px;
+  color: #168b72;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.awards-showcase > header h2 {
+  margin: 0;
+  color: #103b36;
+  font-size: clamp(35px, 4vw, 52px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+.awards-showcase > header p {
+  margin: 7px 0 0;
+  color: #53645f;
+  font-size: 14px;
+  line-height: 1.75;
+}
+.award-list {
+  display: grid;
+  gap: 28px;
+}
+.award-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(360px, 0.82fr);
   overflow: hidden;
-  padding: 34px;
+  min-height: 500px;
+  border-radius: 22px;
   background: #fff;
   border: 1px solid rgba(8, 45, 43, 0.08);
-  border-radius: 18px;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
-.awards article:hover {
+.award-feature:hover {
   transform: translateY(-5px);
   box-shadow: 0 18px 44px rgba(6, 38, 35, 0.1);
 }
-.award-image {
-  display: grid;
-  min-height: 330px;
-  margin: -34px -34px 30px;
-  padding: 32px;
-  background: #eef3f1;
-  place-items: center;
+.award-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  padding: 48px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 50% 25%,
+      rgba(48, 122, 183, 0.24),
+      transparent 44%
+    ),
+    linear-gradient(145deg, #082e50, #031d38 76%);
 }
-.award-image img {
-  width: 100%;
-  height: 280px;
+.award-innovation .award-visual {
+  background:
+    radial-gradient(
+      circle at 48% 30%,
+      rgba(137, 76, 190, 0.3),
+      transparent 44%
+    ),
+    linear-gradient(145deg, #34115c, #071d42 76%);
+}
+.award-mark {
+  position: relative;
+  z-index: 1;
+  width: min(82%, 500px);
+  height: auto;
   object-fit: contain;
 }
-.awards article > b,
+.award-leadership .award-mark {
+  width: min(66%, 420px);
+  transform: translateX(-20%);
+}
+.award-portrait {
+  position: absolute;
+  z-index: 2;
+  right: 1%;
+  bottom: 0;
+  width: 47%;
+  max-height: 82%;
+  object-fit: contain;
+  object-position: bottom;
+}
+.award-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px 46px;
+}
+.award-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 24px;
+  margin-bottom: 34px;
+  border-bottom: 1px solid rgba(8, 45, 43, 0.1);
+}
+.award-meta b,
 .sponsor-card b,
 .contact b {
   color: #168b72;
@@ -4850,35 +4930,64 @@ a {
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
-.awards h2 {
-  margin: 12px 0 10px;
+.award-meta span {
+  color: #75847f;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.award-copy > p:first-of-type {
+  margin: 0 0 10px;
+  color: #168b72;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.award-copy h2 {
+  margin: 0 0 16px;
   color: #102f2b;
-  font-size: clamp(25px, 2.5vw, 34px);
-  font-weight: 500;
-  line-height: 1.12;
-  letter-spacing: -0.03em;
+  font-size: clamp(32px, 3.6vw, 48px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
 }
-.awards article > p {
+.award-copy h3 {
+  max-width: 430px;
+  margin: 0;
   color: #53645f;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+.award-recipient {
+  margin-top: 42px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(8, 45, 43, 0.1);
+}
+.award-recipient span {
+  color: #243e39;
   font-size: 14px;
-  line-height: 1.65;
-}
-.person {
-  align-items: center;
-  gap: 18px;
-  margin-top: 30px;
-  display: flex;
-}
-.person img {
-  object-fit: cover;
-  border-radius: 50%;
-  width: 64px;
-  height: 64px;
-}
-.person span {
-  color: #344b46;
-  font-size: 13px;
   font-weight: 500;
+  line-height: 1.45;
+}
+.award-recipient small {
+  display: block;
+  margin-bottom: 5px;
+  color: #75847f;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.award-note {
+  margin: 42px 0 0;
+  padding-top: 22px;
+  color: #53645f;
+  font-size: 13px;
+  line-height: 1.6;
+  border-top: 1px solid rgba(8, 45, 43, 0.1);
 }
 .news-grid {
   display: grid;
@@ -5449,6 +5558,86 @@ footer small {
   .editorial h2,
   .service-list h2 {
     font-size: 36px;
+  }
+}
+
+@media (width<=900px) {
+  .awards-showcase {
+    width: min(100% - 48px, 760px);
+    padding: 58px 0 50px;
+  }
+  .awards-showcase > header {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 36px;
+  }
+  .awards-showcase > header > span {
+    padding-top: 0;
+  }
+  .awards-showcase > header p {
+    max-width: 620px;
+  }
+  .award-feature {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .award-visual {
+    min-height: 410px;
+  }
+  .award-copy {
+    padding: 38px 36px 42px;
+  }
+}
+
+@media (width<=560px) {
+  .awards-showcase {
+    width: calc(100% - 36px);
+    padding: 46px 0 42px;
+  }
+  .awards-showcase > header h2 {
+    font-size: 31px;
+  }
+  .awards-showcase > header p {
+    font-size: 13px;
+  }
+  .award-list {
+    gap: 18px;
+  }
+  .award-feature {
+    border-radius: 16px;
+  }
+  .award-visual {
+    min-height: 300px;
+    padding: 25px;
+  }
+  .award-leadership .award-mark {
+    width: 70%;
+    transform: translateX(-17%);
+  }
+  .award-portrait {
+    right: -2%;
+    width: 52%;
+    max-height: 78%;
+  }
+  .award-innovation .award-mark {
+    width: 94%;
+  }
+  .award-copy {
+    padding: 28px 23px 32px;
+  }
+  .award-meta {
+    padding-bottom: 17px;
+    margin-bottom: 25px;
+  }
+  .award-copy h2 {
+    font-size: 30px;
+  }
+  .award-copy h3 {
+    font-size: 15px;
+  }
+  .award-recipient,
+  .award-note {
+    margin-top: 30px;
   }
 }
 
