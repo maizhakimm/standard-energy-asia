@@ -12696,7 +12696,9 @@ Error generating stack: ` +
   ];
 function C() {
   let [e, t] = (0, b.useState)(!1),
-    [n, r] = (0, b.useState)(!1);
+    [n, r] = (0, b.useState)(!1),
+    i = window.location.pathname.replace(/\/$/, ``) || `/`,
+    a = i !== `/`;
   return (
     (0, b.useEffect)(() => {
       let e = () => r(window.scrollY > 24);
@@ -12707,7 +12709,7 @@ function C() {
       );
     }, []),
     (0, x.jsxs)(`header`, {
-      className: n ? `header scrolled` : `header`,
+      className: `header${n ? ` scrolled` : ``}${a ? ` inner-page` : ``}`,
       children: [
         (0, x.jsx)(`a`, {
           className: `brand`,
@@ -12736,8 +12738,17 @@ function C() {
         }),
         (0, x.jsx)(`nav`, {
           className: e ? `open` : ``,
-          children: ee.map(([e, t]) =>
-            (0, x.jsx)(`a`, { href: t, children: e }, t),
+          children: ee.map(([n, r]) =>
+            (0, x.jsx)(
+              `a`,
+              {
+                className: i === r ? `active` : ``,
+                href: r,
+                onClick: () => t(!1),
+                children: n,
+              },
+              r,
+            ),
           ),
         }),
       ],
@@ -12966,7 +12977,7 @@ function w() {
         className: `about-intro`,
         children: [
           (0, x.jsxs)(`div`, {
-            className: `breadcrumb`,
+            className: `about-breadcrumb`,
             children: [
               (0, x.jsx)(`a`, { href: `/`, children: `Home` }),
               (0, x.jsx)(`span`, { children: `/` }),
@@ -12992,7 +13003,7 @@ function w() {
             className: `mission-pillars`,
             children: [
               [
-                `/media/005.jpg`,
+                `/media/003.jpg`,
                 `Empowering Business Sustainability`,
                 `We accelerate carbon-conscious practices, equipping businesses to reduce their footprint and build a sustainable future.`,
               ],
@@ -13070,6 +13081,22 @@ function w() {
                 e,
               ),
             ),
+          }),
+        ],
+      }),
+      (0, x.jsxs)(`section`, {
+        className: `cta about-cta`,
+        children: [
+          (0, x.jsx)(`h2`, {
+            children: `Let’s build a more sustainable future.`,
+          }),
+          (0, x.jsx)(`p`, {
+            children: `Turn your climate ambition into credible, measurable action with Standard Energy Asia.`,
+          }),
+          (0, x.jsx)(`a`, {
+            className: `button light`,
+            href: `/contact-us`,
+            children: `Start a conversation`,
           }),
         ],
       }),
