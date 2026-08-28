@@ -13122,52 +13122,141 @@ function w() {
   });
 }
 function ie() {
+  let e = [
+    {
+      title: `Carbon Management`,
+      subtitle: `Measure, Reduce & Offset`,
+      items: [
+        [
+          `Carbon Footprint Calculation`,
+          `We provide accurate and detailed assessments of your carbon footprint, helping you understand your environmental impact.`,
+        ],
+        [
+          `Carbon Offset Strategy`,
+          `Develop a customised plan to offset your emissions with high-quality, verified carbon offset projects.`,
+        ],
+        [
+          `Carbon Credit Portfolio Management`,
+          `Access the carbon credit market to manage emissions and potentially generate financial returns while supporting sustainability initiatives.`,
+        ],
+      ],
+    },
+    {
+      title: `Sustainable Business Solutions`,
+      subtitle: `Build a Greener Future`,
+      items: [
+        [
+          `Sustainability Strategy Development`,
+          `Craft a comprehensive roadmap to achieve your long-term sustainability goals.`,
+        ],
+        [
+          `Life Cycle Analysis`,
+          `Identify opportunities for improvement by assessing the environmental impact of your products and services throughout their lifecycle.`,
+        ],
+        [
+          `Circular Economy Solutions`,
+          `Implement strategies to minimise waste and maximise resource recovery, promoting a more sustainable production model.`,
+        ],
+      ],
+    },
+    {
+      title: `Innovative Waste Management`,
+      subtitle: `Responsible Waste Disposal and Recovery`,
+      items: [
+        [
+          `Used Cooking Oil Collection & Refining`,
+          `Transform used cooking oil into clean-burning biofuel while diverting waste from landfills and creating a valuable resource from waste.`,
+        ],
+      ],
+    },
+    {
+      title: `Critical Materials Recovery`,
+      subtitle: `Recovering Resources for a Sustainable Future`,
+      items: [
+        [
+          `REE Mining from Waste Streams via Green Technology`,
+          `Through a green technology process, we recover valuable rare earth elements from waste streams while minimising environmental impact.`,
+        ],
+      ],
+    },
+    {
+      title: `Reporting and Communication`,
+      subtitle: `Build Your Sustainability Story`,
+      items: [
+        [
+          `Sustainability Reporting`,
+          `Develop comprehensive reports that communicate your sustainability performance and commitment to environmental responsibility.`,
+        ],
+        [
+          `Stakeholder Engagement`,
+          `Build and maintain positive relationships with stakeholders by clearly communicating your sustainability efforts and achievements.`,
+        ],
+        [
+          `Green Marketing Strategies`,
+          `Showcase your environmental commitment through effective marketing strategies that connect with eco-conscious consumers.`,
+        ],
+      ],
+    },
+  ];
   return (0, x.jsxs)(x.Fragment, {
     children: [
       (0, x.jsx)(de, {
         current: `Our Services`,
         eyebrow: `What we do`,
-        title: `Practical pathways to measurable climate impact.`,
-        text: `Our services help businesses understand their environmental impact, take credible action and build sustainability into long-term decision-making.`,
+        title: `Empowering businesses towards sustainability.`,
+        text: `Standard Energy Asia offers a comprehensive suite of services designed to help businesses achieve their sustainability goals and contribute to a cleaner planet.`,
       }),
       (0, x.jsxs)(`section`, {
-        className: `service-list`,
+        className: `services-catalog`,
         children: [
           (0, x.jsxs)(`div`, {
             className: `services-heading`,
             children: [
               (0, x.jsx)(`span`, { children: `Our capabilities` }),
               (0, x.jsx)(`h2`, {
-                children: `From understanding your footprint to building a credible strategy.`,
+                children: `Integrated solutions for every stage of the sustainability journey.`,
               }),
             ],
           }),
           (0, x.jsx)(`div`, {
-            className: `service-rows`,
-            children: S.map(([e, t, n, r]) =>
+            className: `service-categories`,
+            children: e.map((e, t) =>
               (0, x.jsxs)(
-                `article`,
+                `section`,
                 {
+                  className:
+                    e.items.length === 1
+                      ? `service-category compact`
+                      : `service-category`,
                   children: [
-                    (0, x.jsx)(`div`, {
-                      className: `service-image`,
-                      children: (0, x.jsx)(`img`, { src: r, alt: t }),
-                    }),
-                    (0, x.jsxs)(`div`, {
-                      className: `service-copy`,
+                    (0, x.jsxs)(`header`, {
                       children: [
-                        (0, x.jsx)(`b`, { children: e }),
-                        (0, x.jsx)(`h3`, { children: t }),
-                        (0, x.jsx)(`p`, { children: n }),
-                        (0, x.jsx)(`a`, {
-                          href: `/contact-us`,
-                          children: `Discuss this service →`,
+                        (0, x.jsx)(`b`, {
+                          children: String(t + 1).padStart(2, `0`),
                         }),
+                        (0, x.jsx)(`h3`, { children: e.title }),
+                        (0, x.jsx)(`p`, { children: e.subtitle }),
                       ],
+                    }),
+                    (0, x.jsx)(`div`, {
+                      className: `service-items`,
+                      children: e.items.map(([e, t]) =>
+                        (0, x.jsxs)(
+                          `article`,
+                          {
+                            children: [
+                              (0, x.jsx)(`span`, {}),
+                              (0, x.jsx)(`h4`, { children: e }),
+                              (0, x.jsx)(`p`, { children: t }),
+                            ],
+                          },
+                          e,
+                        ),
+                      ),
                     }),
                   ],
                 },
-                e,
+                e.title,
               ),
             ),
           }),
@@ -13177,10 +13266,10 @@ function ie() {
         className: `cta services-cta`,
         children: [
           (0, x.jsx)(`h2`, {
-            children: `Ready to turn ambition into action?`,
+            children: `Ready to embark on your sustainability journey?`,
           }),
           (0, x.jsx)(`p`, {
-            children: `Talk to our team about the right pathway for your organisation’s sustainability goals.`,
+            children: `Partner with Standard Energy Asia to navigate the evolving sustainability landscape and create lasting impact.`,
           }),
           (0, x.jsx)(`a`, {
             className: `button light`,
