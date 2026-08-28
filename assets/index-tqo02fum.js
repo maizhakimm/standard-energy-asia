@@ -13455,7 +13455,9 @@ function oe() {
           (0, x.jsxs)(`header`, {
             children: [
               (0, x.jsx)(`span`, { children: `In the media` }),
-              (0, x.jsx)(`h2`, { children: `Coverage and company highlights.` }),
+              (0, x.jsx)(`h2`, {
+                children: `Coverage and company highlights.`,
+              }),
               (0, x.jsx)(`p`, {
                 children: `Select a story to read the full article on the publisher’s website.`,
               }),
@@ -13472,7 +13474,7 @@ function oe() {
                     href: e.url,
                     target: `_blank`,
                     rel: `noopener noreferrer`,
-                    'aria-label': `${e.title} — opens in a new tab`,
+                    "aria-label": `${e.title} — opens in a new tab`,
                     children: [
                       (0, x.jsx)(`div`, {
                         className: `news-image`,
@@ -13579,6 +13581,7 @@ function se() {
   });
 }
 function ce() {
+  let e = `1` === new URLSearchParams(window.location.search).get(`submitted`);
   return (0, x.jsxs)(x.Fragment, {
     children: [
       (0, x.jsx)(de, {
@@ -13588,45 +13591,246 @@ function ce() {
         text: `Talk to our team about carbon management, waste management and resource recovery solutions.`,
       }),
       (0, x.jsxs)(`section`, {
-        className: `contact`,
+        className: `contact-page`,
         children: [
-          (0, x.jsxs)(`div`, {
+          (0, x.jsxs)(`header`, {
             children: [
-              (0, x.jsx)(`b`, { children: `01` }),
-              (0, x.jsx)(`h2`, { children: `Main Branch` }),
-              (0, x.jsxs)(`p`, {
+              (0, x.jsx)(`span`, { children: `Get in touch` }),
+              (0, x.jsx)(`h2`, { children: `Let’s start a conversation.` }),
+              (0, x.jsx)(`p`, {
+                children: `Tell us about your sustainability goals and our team will get back to you.`,
+              }),
+            ],
+          }),
+          (0, x.jsxs)(`div`, {
+            className: `contact-details`,
+            children: [
+              (0, x.jsxs)(`article`, {
                 children: [
-                  `D1-6-1,2,3 & 3A Solaris Dutamas, Publika`,
-                  (0, x.jsx)(`br`, {}),
-                  `Jalan Dutamas 1, 50480 Kuala Lumpur, Malaysia`,
+                  (0, x.jsx)(`b`, { children: `01 / Main Branch` }),
+                  (0, x.jsx)(`h3`, { children: `Kuala Lumpur` }),
+                  (0, x.jsxs)(`p`, {
+                    children: [
+                      `D1-6-1,2,3 & 3A Solaris Dutamas, Publika`,
+                      (0, x.jsx)(`br`, {}),
+                      `Jalan Dutamas 1, 50480 Kuala Lumpur, Malaysia`,
+                    ],
+                  }),
+                ],
+              }),
+              (0, x.jsxs)(`article`, {
+                children: [
+                  (0, x.jsx)(`b`, { children: `02 / Branch` }),
+                  (0, x.jsx)(`h3`, { children: `Kelantan` }),
+                  (0, x.jsxs)(`p`, {
+                    children: [
+                      `Suite 1.03-23, Wisma ZARA, Business Centre`,
+                      (0, x.jsx)(`br`, {}),
+                      `16150 Kubang Kerian, Kelantan, Malaysia`,
+                    ],
+                  }),
+                ],
+              }),
+              (0, x.jsxs)(`article`, {
+                children: [
+                  (0, x.jsx)(`b`, { children: `03 / Contact` }),
+                  (0, x.jsx)(`h3`, { children: `Reach our team` }),
+                  (0, x.jsx)(`a`, {
+                    href: `tel:+60364199711`,
+                    children: `+60 3-6419 9711`,
+                  }),
+                  (0, x.jsx)(`a`, {
+                    href: `mailto:general@standardenergy.asia`,
+                    children: `general@standardenergy.asia`,
+                  }),
                 ],
               }),
             ],
           }),
           (0, x.jsxs)(`div`, {
+            className: `contact-main`,
             children: [
-              (0, x.jsx)(`b`, { children: `02` }),
-              (0, x.jsx)(`h2`, { children: `Kelantan Branch` }),
-              (0, x.jsxs)(`p`, {
+              (0, x.jsxs)(`form`, {
+                className: `contact-form`,
+                action: `https://formsubmit.co/general@standardenergy.asia`,
+                method: `POST`,
                 children: [
-                  `Suite 1.03-23, Wisma ZARA, Business Centre`,
-                  (0, x.jsx)(`br`, {}),
-                  `16150 Kubang Kerian, Kelantan, Malaysia`,
+                  (0, x.jsx)(`input`, {
+                    type: `hidden`,
+                    name: `_subject`,
+                    defaultValue: `New enquiry from Standard Energy Asia website`,
+                  }),
+                  (0, x.jsx)(`input`, {
+                    type: `hidden`,
+                    name: `_next`,
+                    defaultValue: `https://standard-energy-asia.vercel.app/contact-us?submitted=1`,
+                  }),
+                  (0, x.jsx)(`input`, {
+                    type: `hidden`,
+                    name: `_template`,
+                    defaultValue: `table`,
+                  }),
+                  (0, x.jsx)(`input`, {
+                    type: `hidden`,
+                    name: `_captcha`,
+                    defaultValue: `false`,
+                  }),
+                  (0, x.jsx)(`input`, {
+                    className: `contact-honey`,
+                    type: `text`,
+                    name: `_honey`,
+                    tabIndex: `-1`,
+                    autoComplete: `off`,
+                  }),
+                  (0, x.jsx)(`span`, { children: `Send us a message` }),
+                  (0, x.jsx)(`h2`, { children: `How can we help?` }),
+                  e &&
+                    (0, x.jsx)(`div`, {
+                      className: `form-success`,
+                      role: `status`,
+                      children: `Thank you. Your message has been sent to our team.`,
+                    }),
+                  (0, x.jsxs)(`div`, {
+                    className: `form-row`,
+                    children: [
+                      (0, x.jsxs)(`label`, {
+                        children: [
+                          `Full name`,
+                          (0, x.jsx)(`input`, {
+                            type: `text`,
+                            name: `name`,
+                            placeholder: `Your name`,
+                            autoComplete: `name`,
+                            required: !0,
+                          }),
+                        ],
+                      }),
+                      (0, x.jsxs)(`label`, {
+                        children: [
+                          `Company`,
+                          (0, x.jsx)(`input`, {
+                            type: `text`,
+                            name: `company`,
+                            placeholder: `Company name`,
+                            autoComplete: `organization`,
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, x.jsxs)(`div`, {
+                    className: `form-row`,
+                    children: [
+                      (0, x.jsxs)(`label`, {
+                        children: [
+                          `Email address`,
+                          (0, x.jsx)(`input`, {
+                            type: `email`,
+                            name: `email`,
+                            placeholder: `name@company.com`,
+                            autoComplete: `email`,
+                            required: !0,
+                          }),
+                        ],
+                      }),
+                      (0, x.jsxs)(`label`, {
+                        children: [
+                          `Phone number`,
+                          (0, x.jsx)(`input`, {
+                            type: `tel`,
+                            name: `phone`,
+                            placeholder: `+60`,
+                            autoComplete: `tel`,
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, x.jsxs)(`label`, {
+                    children: [
+                      `Area of interest`,
+                      (0, x.jsxs)(`select`, {
+                        name: `interest`,
+                        defaultValue: ``,
+                        required: !0,
+                        children: [
+                          (0, x.jsx)(`option`, {
+                            value: ``,
+                            disabled: !0,
+                            children: `Select a service`,
+                          }),
+                          (0, x.jsx)(`option`, {
+                            value: `Carbon Management`,
+                            children: `Carbon Management`,
+                          }),
+                          (0, x.jsx)(`option`, {
+                            value: `Sustainable Business Solutions`,
+                            children: `Sustainable Business Solutions`,
+                          }),
+                          (0, x.jsx)(`option`, {
+                            value: `Waste and Materials Recovery`,
+                            children: `Waste & Materials Recovery`,
+                          }),
+                          (0, x.jsx)(`option`, {
+                            value: `Reporting and Communication`,
+                            children: `Reporting & Communication`,
+                          }),
+                          (0, x.jsx)(`option`, {
+                            value: `Other`,
+                            children: `Other enquiry`,
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, x.jsxs)(`label`, {
+                    children: [
+                      `Message`,
+                      (0, x.jsx)(`textarea`, {
+                        name: `message`,
+                        rows: `5`,
+                        placeholder: `Tell us briefly about your goals or project.`,
+                        required: !0,
+                      }),
+                    ],
+                  }),
+                  (0, x.jsx)(`button`, {
+                    type: `submit`,
+                    children: `Send enquiry`,
+                  }),
+                  (0, x.jsx)(`small`, {
+                    children: `This form uses FormSubmit to deliver your message securely to our email.`,
+                  }),
                 ],
               }),
-            ],
-          }),
-          (0, x.jsxs)(`div`, {
-            children: [
-              (0, x.jsx)(`b`, { children: `03` }),
-              (0, x.jsx)(`h2`, { children: `Reach us` }),
-              (0, x.jsx)(`a`, {
-                href: `tel:+60364199711`,
-                children: `+60 3-6419 9711`,
-              }),
-              (0, x.jsx)(`a`, {
-                href: `mailto:general@standardenergy.asia`,
-                children: `general@standardenergy.asia`,
+              (0, x.jsxs)(`aside`, {
+                className: `contact-map`,
+                children: [
+                  (0, x.jsx)(`iframe`, {
+                    src: `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.7089075798413!2d101.6654028!3d3.171146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc485e110b24d5%3A0xcea0ad0ad351f3b3!2sSolaris%20Dutamas!5e0!3m2!1sen!2smy!4v1787905929454!5m2!1sen!2smy`,
+                    title: `Map showing Solaris Dutamas, Kuala Lumpur`,
+                    loading: `lazy`,
+                    allowFullScreen: !0,
+                    referrerPolicy: `strict-origin-when-cross-origin`,
+                  }),
+                  (0, x.jsxs)(`div`, {
+                    children: [
+                      (0, x.jsx)(`span`, { children: `Main Branch` }),
+                      (0, x.jsx)(`h3`, {
+                        children: `Solaris Dutamas, Kuala Lumpur`,
+                      }),
+                      (0, x.jsx)(`p`, {
+                        children: `Visit our main branch at Publika, Jalan Dutamas 1.`,
+                      }),
+                      (0, x.jsx)(`a`, {
+                        href: `https://www.google.com/maps/place/Solaris+Dutamas/@3.171146,101.6654028,17z/data=!4m14!1m7!3m6!1s0x31cc485e110b24d5:0xcea0ad0ad351f3b3!2sSolaris+Dutamas!8m2!3d3.171146!4d101.6654028!16s%2Fg%2F1th07ysf!3m5!1s0x31cc485e110b24d5:0xcea0ad0ad351f3b3!8m2!3d3.171146!4d101.6654028!16s%2Fg%2F1th07ysf?hl=en&entry=ttu&g_ep=EgoyMDI2MDgyNS4wIKXMDSoASAFQAw%3D%3D`,
+                        target: `_blank`,
+                        rel: `noopener noreferrer`,
+                        children: `Get directions ↗`,
+                      }),
+                    ],
+                  }),
+                ],
               }),
             ],
           }),
