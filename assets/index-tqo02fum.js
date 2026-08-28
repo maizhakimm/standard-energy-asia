@@ -13663,7 +13663,7 @@ function ce() {
                   (0, x.jsx)(`input`, {
                     type: `hidden`,
                     name: `_next`,
-                    defaultValue: `https://standard-energy-asia.vercel.app/contact-us?submitted=1`,
+                    defaultValue: `https://standardenergy.asia/contact-us?submitted=1`,
                   }),
                   (0, x.jsx)(`input`, {
                     type: `hidden`,
